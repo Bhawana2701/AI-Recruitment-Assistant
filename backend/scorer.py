@@ -17,12 +17,17 @@ from datetime import datetime, timedelta
 import json
 from sklearn.metrics.pairwise import cosine_similarity
 # Load embedding model
-model = SentenceTransformer("all-MiniLM-L6-v2")
 
+model = None
 
+def get_model():
+    global model
+    if model is None:
+        model = SentenceTransformer("all-MiniLM-L6-v2")
+    return model
 
 def create_embedding(text):
-    return model.encode(text).tolist()
+    return get_model().encode(text).tolist()
 
 
 def store_jd_embedding(
