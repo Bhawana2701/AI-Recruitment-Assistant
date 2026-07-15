@@ -36,12 +36,12 @@ load_dotenv()
 app = FastAPI()
 app.include_router(proctor_router)
 
-print("========== ROUTES ==========")
+# print("========== ROUTES ==========")
 
-for route in app.routes:
-    print(route.path)
+# for route in app.routes:
+#     print(route.path)
 
-print("============================")
+# print("============================")
 
 app.mount(
     "/uploads",
