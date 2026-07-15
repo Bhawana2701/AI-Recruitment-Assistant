@@ -34,7 +34,9 @@ logger = logging.getLogger(__name__)
 load_dotenv()
 
 app = FastAPI()
+print("FastAPI app created")
 app.include_router(proctor_router)
+print("Router loaded")
 
 # print("========== ROUTES ==========")
 

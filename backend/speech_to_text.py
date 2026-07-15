@@ -3,11 +3,14 @@ import whisper
 
 model = None
 
-def transcribe(video_path):
+def get_model():
     global model
 
     if model is None:
         model = whisper.load_model("base")
 
-    result = model.transcribe(video_path)
+    return model
+
+def transcribe(path):
+    result = get_model().transcribe(path)
     return result["text"]
