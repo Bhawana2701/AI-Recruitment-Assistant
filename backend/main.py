@@ -444,7 +444,7 @@ def get_applications():
             "email": row[2],
             "match_score": row[3],
             "status": row[4],
-            "resume_file": f"http://127.0.0.1:8000/uploads/resumes/{row[5]}"
+            "resume_file": f"https://ai-recruitment-assistant-9gvk.onrender.com/uploads/resumes/{row[5]}"
         })
 
     return applications
@@ -605,7 +605,7 @@ def shortlisted_candidates():
             "email": row[2],
             "match_score": row[3],
             "status": row[4],
-            "resume_file": f"http://127.0.0.1:8000/uploads/resumes/{row[5]}"
+            "resume_file": f"https://ai-recruitment-assistant-9gvk.onrender.com/uploads/resumes/{row[7]}"
         })
 
     return data
