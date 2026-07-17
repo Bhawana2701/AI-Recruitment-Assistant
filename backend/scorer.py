@@ -350,7 +350,7 @@ def semantic_search_by_resume_id(
         interview_token = uuid.uuid4().hex
 
         meeting_link = (
-            f"http://localhost:5174/ai-interview/{interview_token}"
+           f"https://ai-recruitment-assistant-gv21-cdc3v7ya1-bhawanakandoi.vercel.app/ai-interview/{interview_token}"
         )
 
         cursor.execute("""
